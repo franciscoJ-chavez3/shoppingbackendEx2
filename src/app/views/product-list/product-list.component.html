@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor = 'let item of productList'>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.pName}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{item.additionalInfo}}</h6>
+                    <p class="card-text">{{item.pDesc}}</p>
+                    
+                    <a  routerLink = "/{{item.pNameURL}}/{{item.id}}" 
+                    class="card-link">
+                    {{item.price}}
+                </a>
+                    <button (click)="addToCart(item)" class="btn-primary">+</button>
+                    <a  class="card-link"><app-modaldesc [product]='item'></app-modaldesc></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor='let poke of pokeFilter'>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{poke.pName}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{poke.price}}</h6>
+                    <p class="card-text">{{poke.price}}</p>
+
+                    <a  class="card-link">
+                        {{poke.price}}
+                    </a>
+                    <a class="card-link">
+                        <app-modaldesc [product]='poke'></app-modaldesc>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

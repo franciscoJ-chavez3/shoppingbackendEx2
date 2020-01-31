@@ -1,0 +1,59 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+.shopping-cart {
+        margin: 20px 0;
+    background: white;
+    border-radius: 3px;
+    padding: 20px;
+    z-index: 1000;
+    position: fixed;
+    width: 25%;
+        margin-left: 50%;
+        max-height: 50vh;
+    overflow: auto;
+  
+  
+  .shopping-cart-header {
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 15px;
+    
+    .shopping-cart-total {
+      float: right;
+    }
+  }
+  
+  .shopping-cart-items {
+    padding-top: 20px;
+      li {
+        margin-bottom: 18px;
+      }
+    img {
+      float: left;
+      margin-right: 12px;
+    }
+    
+    .item-name {
+      display: block;
+      padding-top: 10px;
+      font-size: 16px;
+    }
+    
+    .item-price {
+      margin-right: 8px;
+    }
+    
+    .item-quantity {
+      color: blue;
+    }
+        .item-remove {
+            position: absolute;
+    right: 10px;
+    cursor: pointer;
+        }
+  }
+}
+.cart-icon {
+  color: #515783;
+  font-size: 24px;
+  margin-right: 7px;
+  float: left;
+}
